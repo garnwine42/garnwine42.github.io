@@ -188,6 +188,100 @@
                 skillsandinterests.style.boxShadow = 'none';
             });
         </script>
+
+<script>
+    // Get all the sections
+    const summaryscroll = document.querySelector('.summary');
+    const educationscroll = document.querySelector('.education');
+    const experiencescroll = document.querySelector('.experience');
+    const leadershipandinvolvementscroll = document.querySelector('.leadershipandinvolvement');
+    const skillsandinterestsscroll = document.querySelector('.skillsandinterests');
+    
+    // Add a mouseover event listener to each section
+    summary.addEventListener('mouseover', () => {
+        summary.style.boxShadow = '0 0 10px #0066cc';
+    });
+    
+    education.addEventListener('mouseover', () => {
+        education.style.boxShadow = '0 0 10px #0066cc';
+    });
+    
+    experience.addEventListener('mouseover', () => {
+        experience.style.boxShadow = '0 0 10px #0066cc';
+    });
+    
+    leadershipandinvolvement.addEventListener('mouseover', () => {
+        leadershipandinvolvement.style.boxShadow = '0 0 10px #0066cc';
+    });
+    
+    skillsandinterests.addEventListener('mouseover', () => {
+        skillsandinterests.style.boxShadow = '0 0 10px #0066cc';
+    });
+    
+    // Add a mouseout event listener to each section
+    summary.addEventListener('mouseout', () => {
+        summary.style.boxShadow = 'none';
+    });
+    
+    education.addEventListener('mouseout', () => {
+        education.style.boxShadow = 'none';
+    });
+    
+    experience.addEventListener('mouseout', () => {
+        experience.style.boxShadow = 'none';
+    });
+    
+    leadershipandinvolvement.addEventListener('mouseout', () => {
+        leadershipandinvolvement.style.boxShadow = 'none';
+    });
+    
+    skillsandinterests.addEventListener('mouseout', () => {
+        skillsandinterests.style.boxShadow = 'none';
+    });
+    </script>
+    <script>
+        // Get all the navigation links
+        const navLinks = document.querySelectorAll('.nav a');
+    
+        // Add an event listener to each link
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                // Remove the active class from all links
+                navLinks.forEach(link => link.classList.remove('active'));
+                // Add the active class to the clicked link
+                link.classList.add('active');
+            });
+        });
+    
+        // Add an event listener to the window
+        window.addEventListener('scroll', () => {
+            // Get the current scroll position
+            const scrollPosition = window.scrollY;
+    
+            // Get all the sections
+            const sections = document.querySelectorAll('section');
+    
+            // Loop through each section
+            sections.forEach(section => {
+                // Get the section's offset position
+                const sectionOffset = section.offsetTop;
+    
+                // Check if the scroll position is greater than the section's offset position
+                if (scrollPosition > sectionOffset - 50) {
+                    // Get the section's id
+                    const sectionId = section.id;
+    
+                    // Get the corresponding link
+                    const link = document.querySelector(`a[href="#${sectionId}"]`);
+    
+                    // Remove the active class from all links
+                    navLinks.forEach(link => link.classList.remove('active'));
+                    // Add the active class to the corresponding link
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
     </body>
  
     
