@@ -1,0 +1,144 @@
+/* General Styles */
+body {
+  background-color: #F6F8F9;
+  font-family: 'Source Sans Pro', sans-serif;
+  margin: 0;
+  padding: 0;
+  font-size: 1.2rem;
+}
+
+/* Header Styles */
+.header {
+  background-color: #072F5F;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+/* Nav Styles */
+/* Fixed Nav */
+.nav {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 200px;
+  background-color: #f1f1f1;
+}
+
+/* Style the links inside the navigation bar */
+.nav a {
+  float: left;
+  display: block;
+  color: #000;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.nav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Add a color to the active/current link */
+.nav a.active {
+  background-color: #0066cc;
+  color: white;
+}
+
+/* Contact Info Styles */
+.contactinfo {
+  text-align: center;
+  align-content: center;
+  margin: 0 auto;
+  padding: 20px;
+  font-style: italic;
+}
+
+.contactinfo-content {
+  color: #072F5F;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-decoration: none;
+  font-style: italic;
+  padding: 20px;
+}
+
+/* Collapse and Expand Button Styles */
+.collapse, .expand {
+  background-color: #0066cc;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  margin: 10px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+/* Body Content Styles */
+.body-content {
+  padding: 20px;
+}
+
+/* Summary Styles */
+.summary {
+  padding: 20px;
+  background-color: #F6F8F9;
+  margin-bottom: 10px;
+  font-style: italic;
+  border-radius: 10px;
+  border: 1px solid #0066cc;
+}
+
+.summary h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #0066cc;
+}
+
+.summary p {
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+
+/* Education Styles */
+.education {
+  padding: 20px;
+  background-color: #F6F8F9;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  border: 1px solid #0066cc;
+}
+
+/* Experience Styles */
+.experience {
+  padding: 20px;
+  background-color: #F6F8F9;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  border: 1px solid #0066cc;
+}
+
+/* Leadership & Involvement Styles */
+.leadershipandinvolvement {
+  padding: 20px;
+  background-color: #F6F8F9;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  border: 1px solid #0066cc;
+}
+
+/* Skills & Interests Styles */
+.skillsandinterests {
+  padding: 20px;
+  background-color: #F6F8F9;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  border: 1px solid #0066cc;
+}
