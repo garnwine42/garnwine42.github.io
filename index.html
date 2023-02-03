@@ -7,16 +7,7 @@
         <title>Document</title>
         <link rel="stylesheet" type="text/css" href="style.css">
     </head>
-<body>
     <body>
-        <h1 class="header">JOHN ARNWINE</h1>
-        <section  class="contactinfo">
-            <a class="contactinfo-content" target="_blank" href=mailto:grantarnwine18@gmail.com>grantarnwine18@gmail.com</a>
-            <a class="contactinfo-content">904-314-4136</a>
-            <a class="contactinfo-content" target="_blank" href=https://www.linkedin.com/in/grantarnwine>linkedin.com/in/grantarnwine</a>
-        </section>
-        <button title ="This button collapses the webpage" class="collapse"> Collapse All</button>
-        <button title ="This button expands the webpage" class="expand"> Expand All</button>
         <div class="nav">
             <a href="#summary">Summary</a>
             <a href="#education">Education</a>
@@ -24,16 +15,28 @@
             <a href="#leadershipandinvolvement">Leadership & Involvement</a>
             <a href="#skillsandinterests">Skills & Interests</a>
         </div>
+        <div class="main">
+        <h1 class="header">JOHN "GRANT" ARNWINE</h1>
+        <div  class="contactinfo">
+            <a class="contactinfo-content" target="_blank" href=mailto:grantarnwine18@gmail.com>grantarnwine18@gmail.com</a>
+            <a class="contactinfo-content">904-314-4136</a>
+            <a class="contactinfo-content" target="_blank" href=https://www.linkedin.com/in/grantarnwine>linkedin.com/in/grantarnwine</a>
+        </div>
         <div class="body-content">
             <section id="summary" class="summary">
             <h2>SUMMARY</h2>
+        <button title ="This button expands and collapses the summary content" class="expandandcollapse"> Collapse</button>
+        <div class="summarycontent">
             <p>
                 As a supervisor for Matheson Trucking, I learned how to manage professional relationships, set expectations for my team, and become a servant leader. Through college, other than curriculum, I learned the power of perseverance when I took a year off and came back to be a dean’s list honoree for the remaining time in college. My first career job as a High Net Worth Associate at Fidelity investments has given me the tools and opportunities to satisfy my life pursuits. At Fidelity Investments I have learned the complex nature of financial markets and I have obtained my Series 7 and 63 licenses. I participate in the Amplify program where I work with our Android development team and learn how they operate, give them insight to customer needs and wants, perform analysis and organize processes. Through this program I have further cemented my goal to become
             </p>
+        </div>
             </section>
 
             <section id="education" class="education">
             <h2>EDUCATION</h2>
+            <button title ="This button expands and collapses the summary content" class="expandandcollapse"> Collapse</button>
+            <div class="educationcontent">
             <h3>Bachelor of Arts in Economics</h3>
             <h3>University of Cincinnati August 2017 – December 2020</h3>
             <ul>
@@ -47,10 +50,12 @@
             <ul>
                 <li>GPA: 3.19/4.0</li>
             </ul>
-
+            </div>
             </section>
             <section id="experience" class="experience">
             <h2>EXPERIENCE</h2>
+            <button title ="This button expands and collapses the experience content" class="expandandcollapse"> Collapse</button>
+            <div class="experiencecontent">
             <h3>Customer Relationship Advocate -> High Net Worth I -> High Net Worth II</h3>
             <h3>Fidelity Investments</h3>
             <ul>
@@ -72,12 +77,15 @@
                 <li>Correspond with the USPS and FedEx in order to execute logistical route planning</li>
                 <li>Create Excel worksheets with information on arrival, departure, and weight of inbound and outbound freight</li>
             </ul>
+            </div>
             </section>
 
             <section id="leadershipandinvolvement" class="leadershipandinvolvement">
             <h2>
-                Leadership & Involvement
+                LEADERSHIP & INVOLVEMENT
             </h2>
+            <button title ="This button expands and collapses the leadership and involvement content" class="expandandcollapse"> Collapse</button>
+            <div class="leadershipandinvolvementcontent">
             <h3>Economics Society</h3>
             <h3>University of Cincinnati • Selected MemberJanuary 2020 – Present</h3>
             <ul>
@@ -107,57 +115,80 @@
                 <li>Dedicated 25 hours a week to training outside of football games</li>
                 <li>Supported, motivated, and lead teammates to reach full potential</li>
             </ul>
+            </div>
             </section>
             <section id="skillsandinterests" class="skillsandinterests">
                 <h2>
-                    Skills and Interests
+                    SKILLS AND INTERESTS
                 </h2>
+                <button title ="This button expands and collapses the skills and interests content" class="expandandcollapse"> Collapse</button>
+            <div class="skillsandinterestscontent">
             <p>Computer: Stata, Microsoft Office, HTML, CSS, JQL, Jira, Javascript</p>
             <p>Interests: Coding, Stock Trading, Hiking, Graphic Design, Cooking</p>
+            </div>
             </section>
         </div>
-        <script>
-            const expandButton = document.querySelector('.expand');
-            const collapseButton = document.querySelector('.collapse');
-            const bodyContent = document.querySelector('.body-content');
-        
-            expandButton.addEventListener('click', () => {
-                bodyContent.style.display = 'block';
+        </div>
+           <!-- Collapse Expand Script -->
+       <script>
+            var expandandcollapse = document.querySelectorAll('.expandandcollapse');
+            for (let i=0; i<expandandcollapse.length; i++){
+                expandandcollapse[i].addEventListener('click', function(){
+                    let content = this.nextElementSibling;
+                    if (content.style.display === 'none'){
+                        content.style.display = 'block';
+                        this.innerHTML = 'Collapse';
+                    } else {
+                        content.style.display = 'none';
+                        this.innerHTML = 'Expand';
+                    }
+                });
+            }
+        </script>
+         <!-- Glowing Scroll over Script -->
+         <script>
+            const summary = document.querySelector('.summary');
+            summary.addEventListener('mouseover', () => {
+                summary.style.boxShadow = '0 0 10px #0066cc';
             });
         
-            collapseButton.addEventListener('click', () => {
-                bodyContent.style.display = 'none';
+            summary.addEventListener('mouseout', () => {
+                summary.style.boxShadow = 'none';
+            });
+            const education = document.querySelector('.education');
+            education.addEventListener('mouseover', () => {
+                education.style.boxShadow = '0 0 10px #0066cc';
+            });
+        
+            education.addEventListener('mouseout', () => {
+                education.style.boxShadow = 'none';
+            });
+            const experience = document.querySelector('.experience');
+            experience.addEventListener('mouseover', () => {
+                experience.style.boxShadow = '0 0 10px #0066cc';
+            });
+        
+            experience.addEventListener('mouseout', () => {
+                experience.style.boxShadow = 'none';
+            });
+            const leadershipandinvolvement = document.querySelector('.leadershipandinvolvement');
+            leadershipandinvolvement.addEventListener('mouseover', () => {
+                leadershipandinvolvement.style.boxShadow = '0 0 10px #0066cc';
+            });
+        
+            leadershipandinvolvement.addEventListener('mouseout', () => {
+                leadershipandinvolvement.style.boxShadow = 'none';
+            });
+            const skillsandinterests = document.querySelector('.skillsandinterests');
+            skillsandinterests.addEventListener('mouseover', () => {
+                skillsandinterests.style.boxShadow = '0 0 10px #0066cc';
+            });
+        
+            skillsandinterests.addEventListener('mouseout', () => {
+                skillsandinterests.style.boxShadow = 'none';
             });
         </script>
     </body>
-    <script>
-        const collapseBtn = document.querySelector('.collapse');
-        const expandBtn = document.querySelector('.expand');
-        const sections = document.querySelectorAll('section');
-        
-        collapseBtn.addEventListener('click', () => {
-            sections.forEach((section) => {
-                section.style.display = 'none';
-                section.previousElementSibling.style.display = 'block';
-            });
-        });
-        
-        expandBtn.addEventListener('click', () => {
-            sections.forEach((section) => {
-                section.style.display = 'block';
-                section.previousElementSibling.style.display = 'block';
-            });
-        });
-    </script>
-    <script>
-        const summary = document.querySelector('.summary');
-        summary.addEventListener('mouseover', () => {
-            summary.style.boxShadow = '0 0 10px #0066cc';
-        });
-    
-        summary.addEventListener('mouseout', () => {
-            summary.style.boxShadow = 'none';
-        });
-    </script>
+ 
     
 </html>
